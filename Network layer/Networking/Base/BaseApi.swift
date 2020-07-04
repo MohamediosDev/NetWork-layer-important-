@@ -32,6 +32,10 @@ class  BaseApi<T:TargetType> {
                 guard let responseobj = try? JSONDecoder().decode(M.self, from: JsonData) else {return}
                 completion(.success(responseobj))
             }
+            else {
+            
+            print("error")
+            }
         }
     }
     
@@ -45,7 +49,7 @@ class  BaseApi<T:TargetType> {
         
         AF.request(target.baseurl + target.path , method: method , parameters: param.0 , encoding: param.1 , headers: headers).responseJSON { (respone) in
             guard let stauts = respone.response?.statusCode else {return}
-            if stauts == 200 {
+           if stauts >= 200 && stauts < 300 {
                 
                 guard let jsonresponse = try? respone.result.get() else {return}
                 
@@ -53,6 +57,10 @@ class  BaseApi<T:TargetType> {
                 
                 guard let responseobj = try? JSONDecoder().decode(M.self, from: JsonData) else {return}
                 completion(.success(responseobj))
+            }
+           else {
+            
+            print("error")
             }
         }
     }

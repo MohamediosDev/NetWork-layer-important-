@@ -10,7 +10,7 @@
 		3D619308161C952964300774 /* Pods_Network_layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CBC817D05855E9391438DE /* Pods_Network_layer.framework */; };
 		D92896EC24AFD4F800AA91F6 /* UserNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92896EB24AFD4F800AA91F6 /* UserNetworking.swift */; };
 		D92896EE24AFDAC700AA91F6 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92896ED24AFDAC700AA91F6 /* UserAPI.swift */; };
-		D92896F024AFDDCC00AA91F6 /* datauser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92896EF24AFDDCC00AA91F6 /* datauser.swift */; };
+		D92896F024AFDDCC00AA91F6 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92896EF24AFDDCC00AA91F6 /* BaseResponse.swift */; };
 		D92896F324AFDE2700AA91F6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92896F224AFDE2700AA91F6 /* UserModel.swift */; };
 		D99A3EC524B1067F000EBA92 /* CreateUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99A3EC424B1067F000EBA92 /* CreateUserModel.swift */; };
 		D99E04E124AF608500FF7447 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E04E024AF608500FF7447 /* AppDelegate.swift */; };
@@ -29,7 +29,7 @@
 		C8B13C7D555435E6744F81AF /* Pods-Network layer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Network layer.release.xcconfig"; path = "Target Support Files/Pods-Network layer/Pods-Network layer.release.xcconfig"; sourceTree = "<group>"; };
 		D92896EB24AFD4F800AA91F6 /* UserNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworking.swift; sourceTree = "<group>"; };
 		D92896ED24AFDAC700AA91F6 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
-		D92896EF24AFDDCC00AA91F6 /* datauser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datauser.swift; sourceTree = "<group>"; };
+		D92896EF24AFDDCC00AA91F6 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		D92896F224AFDE2700AA91F6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		D99A3EC424B1067F000EBA92 /* CreateUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserModel.swift; sourceTree = "<group>"; };
 		D99E04DD24AF608500FF7447 /* Network layer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Network layer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,7 +78,7 @@
 			children = (
 				D92896EB24AFD4F800AA91F6 /* UserNetworking.swift */,
 				D92896ED24AFDAC700AA91F6 /* UserAPI.swift */,
-				D92896EF24AFDDCC00AA91F6 /* datauser.swift */,
+				D92896EF24AFDDCC00AA91F6 /* BaseResponse.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -263,7 +263,7 @@
 				D99E04F724AF61F200FF7447 /* TargetType.swift in Sources */,
 				D99E04F924AF658B00FF7447 /* BaseApi.swift in Sources */,
 				D99E04E524AF608500FF7447 /* ViewController.swift in Sources */,
-				D92896F024AFDDCC00AA91F6 /* datauser.swift in Sources */,
+				D92896F024AFDDCC00AA91F6 /* BaseResponse.swift in Sources */,
 				D99E04E124AF608500FF7447 /* AppDelegate.swift in Sources */,
 				D92896EC24AFD4F800AA91F6 /* UserNetworking.swift in Sources */,
 				D99E04E324AF608500FF7447 /* SceneDelegate.swift in Sources */,

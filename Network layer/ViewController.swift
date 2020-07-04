@@ -30,13 +30,15 @@ class ViewController: UIViewController {
         
         let api:UserApiProtocol = UserApi()
         api.createUser(name: "Soda", jop: "software engineer") { (result) in
+            
             switch result {
     
             case .success(let response):
                 print(response)
-                print("name: \(response?.name ?? "")\n Jop:\(response?.job ?? "")/n id: \(response?.id ?? "")/n create : \(response?.createdAt ?? "")")
+                print("Done")
+                print("name : \(response?.name ?? "")\nJop : \(response?.job ?? "") \nid: \(response?.id ?? "") \ncreate : \(response?.createdAt ?? "")")
             case .failure(let error):
-                print("Bad singal")
+                print("Bad !")
             }
         }
         

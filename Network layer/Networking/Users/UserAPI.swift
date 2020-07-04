@@ -9,7 +9,7 @@
 import Foundation
 
 protocol UserApiProtocol {
-     func getusers(completion : @escaping (Result<datauser?
+     func getusers(completion : @escaping (Result<BaseResponse?
            ,NSError>) -> Void)
     func createUser(name:String , jop:String ,completion : @escaping (Result<CreateUserModel?,NSError>) -> Void)
 }
@@ -18,8 +18,8 @@ protocol UserApiProtocol {
 
 class UserApi:BaseApi<UserNetworking>,UserApiProtocol {
     
-    func getusers(completion: @escaping (Result<datauser?, NSError>) -> Void) {
-         self.fetchdata(target: .getusers, responseclass: datauser.self) { (result) in
+    func getusers(completion: @escaping (Result<BaseResponse?, NSError>) -> Void) {
+         self.fetchdata(target: .getusers, responseclass: BaseResponse.self) { (result) in
                    completion(result)
     }
     

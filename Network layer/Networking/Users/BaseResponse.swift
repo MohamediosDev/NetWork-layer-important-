@@ -8,7 +8,7 @@
 
 import Foundation
 
-class datauser: Codable {
+class BaseResponse: Codable {
     var data:[USerdata]?
     var createdata:[CreateUserModel]?
     
