@@ -7,12 +7,14 @@
 //
 
 import Foundation
+import Alamofire
 
 
 
 enum UserNetworking {
     
     case getusers
+    case createuser(name:String ,job:String)
     
     
     
@@ -21,13 +23,17 @@ enum UserNetworking {
 extension UserNetworking :TargetType {
     var baseurl: String {
         switch self {
-        default:
-            return "https://reqres.in/api"
+        case .getusers:
+                   return "http://dummy.restapiexample.com/api/v1"
+               default:
+                   return "https://reqres.in/api"
         }
     }
     var path: String {
         switch self {
         case.getusers:
+            return "/employees"
+        case.createuser:
             return "/users"
         }
     }
@@ -36,6 +42,8 @@ extension UserNetworking :TargetType {
         switch self {
         case.getusers :
             return .get
+        case.createuser:
+            return.post
         }
     }
     
@@ -43,6 +51,8 @@ extension UserNetworking :TargetType {
         switch self {
         case .getusers:
             return .plaintext
+            case .createuser(let name, let job):
+                return .requestparametres(parametres: ["name": name, "job": job], encoding: JSONEncoding.default)
             
         }
     }

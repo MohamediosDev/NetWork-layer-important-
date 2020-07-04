@@ -10,10 +10,12 @@ import Foundation
 
 class datauser: Codable {
     var data:[USerdata]?
+    var createdata:[CreateUserModel]?
     
        enum CodingKeys: String , CodingKey{
            
            case data = "data"
+           case createdata  = "createdata"
            
        }
 }
