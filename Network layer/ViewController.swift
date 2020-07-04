@@ -13,6 +13,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let api = UserApi()
+        api.getusers { (result) in
+            switch result {
+    
+            case .success(let response):
+                let users = response?.data
+                for users in users ?? [] {
+                    
+                    print("\(users.firstname),\(users.lastname)")
+                    
+                    
+                }
+            case .failure(let erroe):
+            print("erroe with server")
+            }
+        }
     }
 
 
